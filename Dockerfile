@@ -9,14 +9,14 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     libonig-dev \
     libxml2-dev \
+    libzip-dev \
     zip \
     unzip \
-    libzip-dev \
+    libicu-dev \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Instala extensões PHP necessárias para o Laravel
-# Adicionado mysqli
-RUN docker-php-ext-install pdo pdo_mysql mysqli mbstring exif pcntl bcmath gd zip
+RUN docker-php-ext-install pdo pdo_mysql mysqli mbstring exif pcntl bcmath gd zip intl
 
 # Habilita mod_rewrite do Apache
 RUN a2enmod rewrite
