@@ -49,7 +49,7 @@ class ServiceResource extends Resource
                     ->label('Serviço'),
                 Tables\Columns\TextColumn::make('duration')
                     ->label('Duração')
-                    ->suffix('Minutos'),
+                    ->suffix(' minutos'),
                 Tables\Columns\TextColumn::make('description')
                     ->label('Descrição'),
                 Tables\Columns\IconColumn::make('is_active')
